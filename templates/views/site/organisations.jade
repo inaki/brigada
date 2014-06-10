@@ -1,0 +1,24 @@
+extends ../../layouts/default
+
+include ../../mixins/organisation
+
+block intro
+	.page-intro: .container
+		h1 Organizations
+		p This are organizations related to Code 4 Puerto Rico, who help us and support us.« Join us!
+		.buttons
+			if !user
+				a(href='/join').btn.btn-primary Join Code 4 Puerto Rico
+			a(href='/members').btn.btn-default View Members
+			a(href='/members/mentors').btn.btn-default View Mentors
+
+block content
+	.container
+		.organisations
+			if organisations.length
+				each org, i in organisations
+					if i
+						hr
+					+organisations(org)
+			else
+				h3.text-muted There are no organisations yet.

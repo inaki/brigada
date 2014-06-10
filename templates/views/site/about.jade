@@ -1,0 +1,46 @@
+extends ../../layouts/default
+
+include ../../mixins/organiser
+
+block intro
+	.page-intro: .container
+		h1 About
+		p This group have as a goal creating a space for volunteer developers, designers and citizens of Puerto Rico. A space where they can think and develop solutions for a better future.
+		p In this moment of economic crisis, when so many 'boricuas' are deciding to just migrate, we have a chance to do it different. We must work together in this difficult moment to create the society we have the potential to be.
+		.buttons
+			if !user
+				a(href='/join').btn.btn-primary Join Code 4 Puerto Rico
+			a(href="https://twitter.com/code4puertorico", class="twitter-follow-button", data-show-count="true" data-size="large") Follow @code4puertorico
+
+block content
+	.container
+		h2 Organisers
+		p.lead Core team of Code 4 Puerto Rico brigade.
+		.row.about-organisers
+			each org in organisers
+				.col-sm-3
+					+organiser(org)
+
+
+		//- CODE
+		a(name='code')
+		h2 Agenda
+		.row
+			.col-sm-9.col-md-8
+				ul
+					li <strong> 6:00 pm </strong> Eating and socializing
+					li <strong> 7:00 pm </strong> Announcements
+					li <strong> 7:30 pm </strong> Talking about the projects and issues
+					li <strong> 8:00 pm </strong> Happy hacking!
+
+
+
+			.col-sm-3.col-md-offset-1
+				hr.visible-xs
+				h3 Thank you
+				p Our organization is related to <a href="http://codeforamerica.org">Code for America</a>, and the Open Data Movement.
+
+block js
+	// twitter
+	script.
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
