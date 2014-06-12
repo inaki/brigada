@@ -8,8 +8,8 @@ exports = module.exports = function(req, res) {
 	locals.section = 'about';
 
 	locals.organisers = [
-		{ name: 'Imanol Aranzadi',    image: '/images/justMe.jpg',    twitter: 'iaranzadi',            title: 'Captain' },
-		{ name: 'Stephanie Kruger',     image: '/images/stef.jpeg',     twitter: 'skruger74',   title: 'Co-captain' },
+		{ name: 'Imanol Aranzadi',    image: '/images/justMe.jpg',    twitter: 'iaranzadi',            title: 'Captain, and organizer.' },
+		{ name: 'Stephanie Kruger',     image: '/images/stef.jpeg',     twitter: 'skruger74',   title: 'Captain and coordinator' },
 		{ name: 'Froilan Irizarri',       image: '/images/froi.jpeg',       twitter: 'skfroi',        title: 'Code evangelist' },
 		{ name: 'Alberto Colón',     image: '/images/albert.png',   twitter: 'alberti_co',      title: 'Data organizer' },
 		{ name: 'Andrés Martínez',    image: '/images/otherandres.jpeg',    twitter: 'OtherAndres',            title: 'Public Relations' },
